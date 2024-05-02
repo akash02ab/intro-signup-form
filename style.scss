@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--red: hsl(0, 100%, 74%);
+	--green: hsl(154, 59%, 51%);
+	--tint-green: hsla(154, 59%, 51%, 75%);
+	--blue: hsl(248, 32%, 49%);
+	--dark-blue: hsl(249, 10%, 26%);
+	--grayish-blue: hsl(246, 25%, 77%);
+	--white: hsl(0, 0%, 100%);
+	--black-shadow: hsla(250, 10%, 26%, 25%);
+	--fs-base: 16px;
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+	--fw-700: 700;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background: url(./images/bg-intro-mobile.png);
+	background-color: var(--red);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	max-width: 540px;
+	min-height: calc(100vh - 72px);
+	padding: 50px 25px 25px 25px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+
+	article {
+		h1 {
+			font-size: 28px;
+			line-height: 1.4;
+			color: var(--white);
+			text-align: center;
+		}
+
+		p {
+			font-size: var(--fs-base);
+			line-height: 1.6;
+			color: var(--white);
+			text-align: center;
+			margin-top: 20px;
+		}
+	}
+
+	section {
+		.pricing {
+			color: var(--white);
+			background-color: var(--blue);
+			border-radius: 8px;
+			padding: 18px 56px;
+			text-align: center;
+			line-height: 1.7;
+			box-shadow: 1px 4px 4px 4px var(--black-shadow);
+		}
+
+		form {
+			margin-top: 22px;
+			background-color: var(--white);
+			padding: 24px;
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			box-shadow: 1px 4px 4px 4px var(--black-shadow);
+
+			.input-field {
+				padding: 20px 16px;
+				border-radius: 4px;
+				border: 1px solid var(--grayish-blue);
+				color: var(--dark-blue);
+				font-weight: var(--fw-500);
+
+				&:focus {
+					outline: 1px solid var(--dark-blue);
+				}
+
+				&::placeholder {
+					color: var(--grayish-blue);
+				}
+			}
+
+			.error {
+				display: none;
+			}
+
+			#cliam-btn {
+				padding: 20px 16px;
+				background-color: var(--green);
+				color: var(--white);
+				border: 1px solid var(--green);
+				border-radius: 4px;
+				outline: none;
+				font-size: 14px;
+				font-weight: var(--fw-500);
+				text-transform: uppercase;
+				letter-spacing: 0.2ch;
+				cursor: pointer;
+
+				&:hover {
+					background-color: var(--tint-green);
+					box-shadow: 1px 2px 1px 2px var(--black-shadow);
+				}
+			}
+
+			.terms-n-service {
+				font-size: 12px;
+				font-weight: var(--fw-600);
+				color: var(--grayish-blue);
+				text-align: center;
+				letter-spacing: 0.05ch;
+
+				b {
+					color: var(--red);
+				}
+			}
+		}
+	}
+}
+
+footer {
+	padding: 12px;
+	width: fit-content;
+	margin: 0 auto;
+
+	.attribution {
+		text-align: center;
+		font-size: 12px;
+		font-weight: var(--fw-400);
+		color: var(--white);
+	}
+}
