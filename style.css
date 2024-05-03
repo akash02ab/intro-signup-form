@@ -70,7 +70,12 @@ body {
   gap: 15px;
   box-shadow: 1px 4px 4px 4px var(--black-shadow);
 }
+.container section form .input-wrapper {
+  width: 100%;
+  position: relative;
+}
 .container section form .input-field {
+  width: 100%;
   padding: 20px 16px;
   border-radius: 4px;
   border: 1px solid var(--grayish-blue);
@@ -86,10 +91,30 @@ body {
 .container section form .input-field::placeholder {
   color: var(--grayish-blue);
 }
+.container section form #eye {
+  width: 24px;
+  height: auto;
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.container section form .input-error {
+  background: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-size: 24px auto;
+  background-position: calc(100% - 30px);
+}
 .container section form .error {
   display: none;
+  font-size: 12px;
+  font-weight: var(--fw-400);
+  color: var(--red);
+  margin-top: -10px;
+  text-align: center;
 }
-.container section form #cliam-btn {
+.container section form #claim-btn {
   padding: 20px 16px;
   background-color: var(--green);
   color: var(--white);
@@ -102,7 +127,7 @@ body {
   letter-spacing: 0.2ch;
   cursor: pointer;
 }
-.container section form #cliam-btn:hover {
+.container section form #claim-btn:hover {
   background-color: var(--tint-green);
   box-shadow: 1px 2px 1px 2px var(--black-shadow);
 }
@@ -112,6 +137,9 @@ body {
   color: var(--grayish-blue);
   text-align: center;
   letter-spacing: 0.05ch;
+}
+.container section form .terms-n-service a {
+  text-decoration: none;
 }
 .container section form .terms-n-service b {
   color: var(--red);
@@ -128,4 +156,41 @@ footer .attribution {
   font-size: 12px;
   font-weight: var(--fw-400);
   color: var(--white);
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    background: url(./images/bg-intro-desktop.png);
+    background-color: var(--red);
+  }
+  .container {
+    max-width: 1440px;
+    padding: 110px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container article {
+    max-width: 496px;
+  }
+  .container article h1 {
+    font-size: 48px;
+    font-weight: var(--fw-700);
+    text-align: left;
+    line-height: 1.2;
+  }
+  .container article p {
+    font-size: 18px;
+    font-weight: var(--fw-500);
+    text-align: left;
+    line-height: 1.5;
+  }
+  .container section {
+    width: 540px;
+  }
+  .container section form {
+    padding: 44px;
+  }
+  .container section form .error {
+    text-align: right;
+  }
 }/*# sourceMappingURL=style.css.map */

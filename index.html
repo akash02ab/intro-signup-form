@@ -49,20 +49,23 @@
 					<i id="email-invalid" class="error"
 						>Looks like this is not an email</i
 					>
-					<input
-						type="password"
-						placeholder="Password"
-						id="password"
-						class="input-field"
-					/>
+					<div class="input-wrapper">
+						<input
+							type="password"
+							placeholder="Password"
+							id="password"
+							class="input-field"
+						/>
+						<img src="./images/eye-slash.svg" alt="hide" id="eye">
+					</div>
 					<i id="password-empty" class="error">Password cannot be empty</i>
 					<i id="password-short" class="error"
 						>Password must be at least 6 characters</i
 					>
-					<button id="cliam-btn">Claim your free trial</button>
+					<button id="claim-btn">Claim your free trial</button>
 					<p class="terms-n-service">
 						By clicking the button, you are agreeing to our
-						<b>Terms and Services</b>
+						<a href="/"><b>Terms and Services</b></a>
 					</p>
 				</form>
 			</section>
@@ -81,5 +84,6 @@
 				<a href="https://akashbanchhor.vercel.app" target="_blank">Akash B</a>.
 			</p>
 		</footer>
+		<script src="./script.js"></script>
 	</body>
 </html>
