@@ -24,11 +24,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot)
+**Desktop**
+
+![](./screenshot/desktop.png)
+
+**Mobile**
+
+![](./screenshot/mobile.png)
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://akash02ab.github.io/intro-signup-form/)
 - [Live Site URL](https://your-live-site-url.com)
 
 ### Built with
@@ -36,7 +42,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ## Author
