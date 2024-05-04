@@ -11,52 +11,64 @@ const passwordEmpty = document.getElementById("password-empty");
 const passwordShort = document.getElementById("password-short");
 const eye = document.getElementById("eye");
 
+const removeClass = (element, className) => {
+  element.classList.remove(className);
+};
+
+const addClass = (element, className) => {
+  element.classList.add(className);
+};
+
+const hideElement = (element) => {
+  element.style.display = "none";
+};
+
+const showElement = (element) => {
+  element.style.display = "block";
+};
+
+const isEmpty = (element) => {
+  return element.value.trim() === "";
+};
+
 const checkInputs = () => {
-  firstName.classList.remove("input-error");
-  lastName.classList.remove("input-error");
-  email.classList.remove("input-error");
-  password.classList.remove("input-error");
-  firstNameError.style.display = "none";
-  lastNameError.style.display = "none";
-  emailEmpty.style.display = "none";
-  emailInvalid.style.display = "none";
-  passwordEmpty.style.display = "none";
-  passwordShort.style.display = "none";
+  [firstName, lastName, email, password].forEach((input) => removeClass(input, "input-error"));
+  [firstNameError, lastNameError, emailEmpty, emailInvalid, passwordEmpty, passwordShort].forEach(hideElement);
 
-  if (firstName.value.trim() === "") {
-    firstName.classList.add("input-error");
-    firstNameError.style.display = "block";
+  if (isEmpty(firstName)) {
+    addClass(firstName, "input-error");
+    showElement(firstNameError);
     return;
   }
 
-  if (lastName.value.trim() === "") {
-    lastName.classList.add("input-error");
-    lastNameError.style.display = "block";
+  if (isEmpty(lastName)) {
+    addClass(lastName, "input-error");
+    showElement(lastNameError);
     return;
   }
 
-  if (email.value.trim() === "") {
-    email.classList.add("input-error");
-    emailEmpty.style.display = "block";
+  if (isEmpty(email)) {
+    addClass(email, "input-error");
+    showElement(emailEmpty);
     return;
   }
 
   const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email.value.trim().match(validEmail)) {
-    email.classList.add("input-error");
-    emailInvalid.style.display = "block";
+    addClass(email, "input-error");
+    showElement(emailInvalid);
     return;
   }
 
-  if (password.value.trim() === "") {
-    password.classList.add("input-error");
-    passwordEmpty.style.display = "block";
+  if (isEmpty(password)) {
+    addClass(password, "input-error");
+    showElement(passwordEmpty);
     return;
   }
 
   if (password.value.length < 6) {
-    password.classList.add("input-error");
-    passwordShort.style.display = "block";
+    addClass(password, "input-error");
+    showElement(passwordShort);
     return;
   }
 }

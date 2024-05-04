@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://akash02ab.github.io/intro-signup-form/)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/intro-component-signup-from-NomOxAUlf_)
+- [Live Site URL](https://akash02ab.github.io/intro-signup-form/)
 
 ### Built with
 
